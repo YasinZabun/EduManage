@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "EduManage.Consumer": {
+      "commandName": "Project"
+    },
+    "Docker": {
+      "commandName": "Docker"
+    }
+  }
+}
