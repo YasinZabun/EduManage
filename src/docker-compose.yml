@@ -43,21 +43,21 @@ services:
       - postgres
       - rabbitmq
 
-  # consumer:
-  #   build:
-  #     context: .
-  #     dockerfile: Dockerfile_Consumer
-  #   depends_on:
-  #     - api_app
+  consumer:
+    build:
+      context: .
+      dockerfile: Dockerfile_Consumer
+    depends_on:
+      - api_app
 
-  # identity_server:
-  #   build:
-  #     context: .
-  #     dockerfile: Dockerfile_IdentityServer
-  #   ports:
-  #     - "5001:5001"
-  #   depends_on:
-  #     - api_app
+  identity_server:
+    build:
+      context: .
+      dockerfile: Dockerfile_IdentityServer
+    ports:
+      - "5001:5001"
+    depends_on:
+      - api_app
 
 volumes:
   redis_data:
